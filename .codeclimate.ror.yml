@@ -1,0 +1,36 @@
+---
+version: "2"
+plugins:
+  brakeman:
+    # A static security scanner for Ruby on Rails applications.
+    enabled: true
+  bundler-audit:
+    # Find security vulnerabilities in your Ruby dependencies.
+    # bundler-audit offers patch-level verification for Bundler.
+    enabled: true
+  fixme:
+    # The FIXME engine finds comments in your code which match the strings
+    # TODO, FIXME, HACK, and BUG, which are all things you should fix now,
+    # not later. FIXME is also very simple, and is intended to provide a
+    # 'Hello World' like example for potential Code Climate Platform engine authors.
+    enabled: true
+  reek:
+    # Code smell detector for Ruby.
+    enabled: true
+  rubocop:
+    # Style and quality checks for Ruby code.
+    # Includes support for modern Rubies (2.2+).
+    enabled: true
+    exclude_paths:
+      - vendor/
+ratings:
+   # to receive a letter grade for a particular file or overall GPA for your project
+   paths:
+   - "app/**/*"
+   - "lib/**/*"
+   - "**.rb"
+exclude_paths:
+ - features/**/*
+ - spec/**/*
+ - test/**/*
+ - vendor/**/*
