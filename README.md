@@ -1,0 +1,2 @@
+# codeclimate-configs
+codeclimate-configs
