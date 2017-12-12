@@ -1,0 +1,27 @@
+---
+version: "2"
+plugins:
+  fixme:
+    # The FIXME engine performs a case-sensitive search for the following strings in your project: 
+    # TODO, FIXME, HACK, XXX, and BUG, which are all things you should fix now, not later. You 
+    # can also configure FIXME to search for any strings you want in you project.
+    enabled: true
+  gofmt:
+    # Reformats Go source code.
+    enabled: true    
+  golint:
+    # A linter for Go code that suggests style issues that may need to be addressed. 
+    enabled: true
+    config:
+      min_confidence: 0.9
+  govet:
+    # Examines Go source code to identify suspicious constructs and potential bugs.
+    enabled: true
+ratings:
+   # to receive a letter grade for a particular file or overall GPA for your project
+   paths:
+   - "**/*"
+   - "**.go"
+exclude_patterns:
+- "bin/*"
+- "pkg/*"
