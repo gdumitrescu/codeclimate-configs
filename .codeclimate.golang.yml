@@ -17,11 +17,6 @@ plugins:
   govet:
     # Examines Go source code to identify suspicious constructs and potential bugs.
     enabled: true
-ratings:
-   # to receive a letter grade for a particular file or overall GPA for your project
-   paths:
-   - "**/*"
-   - "**.go"
 exclude_patterns:
 - "bin/*"
 - "pkg/*"

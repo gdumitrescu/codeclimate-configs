@@ -21,15 +21,9 @@ plugins:
     # Style and quality checks for Ruby code.
     # Includes support for modern Rubies (2.2+).
     enabled: true
-    exclude_paths:
+    exclude_patterns:
       - vendor/
-ratings:
-   # to receive a letter grade for a particular file or overall GPA for your project
-   paths:
-   - "app/**/*"
-   - "lib/**/*"
-   - "**.rb"
-exclude_paths:
+exclude_patterns:
  - features/**/*
  - spec/**/*
  - test/**/*
